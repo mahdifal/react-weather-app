@@ -1,24 +1,9 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCloudSun } from '@fortawesome/free-solid-svg-icons'
+import { faCloudSun, } from '@fortawesome/free-solid-svg-icons'
 
 export default function Form({ getWeather }) {
-    const handleSubmit = e => {
-        e.preventDefault();
-        let city = document.querySelector('#city').value;
-        let country = document.querySelector('#country').value;
 
-        if (city === '' && country === '') {
-            let alert = document.querySelector('.my-alert');
-            alert.style.display = 'block';
-            setTimeout(() => {
-                alert.style.display = 'none';
-            }, 3000)
-            return false;
-        }
-
-        return { city, country };
-    }
     return (
         <div className="container form-back">
             <div className="row">
@@ -32,6 +17,9 @@ export default function Form({ getWeather }) {
                                 color="#ffffff"
                             />
                         </span>
+                    </div>
+                    <div className="text-center my-3">
+                        <a href="https://github.com/mahdifal" className="btn btn-secondary">My GitHub</a>
                     </div>
                     <div className="form align-self-center" style={{ marginTop: '3rem' }}>
                         <form onSubmit={getWeather}>

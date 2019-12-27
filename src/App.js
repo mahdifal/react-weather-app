@@ -11,8 +11,7 @@ function App() {
 
   const getWeather = async e => {
     e.preventDefault();
-
-    if (validationForm()) {
+    if (validationForm() === true) {
       let city = document.querySelector("#city").value.trim();
       let country = document.querySelector("#country").value.trim();
       setIsLoading(true);
@@ -21,7 +20,6 @@ function App() {
         `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`
       );
       const data = await api_call.json();
-      console.log(data);
       setWeather([data]);
       setIsLoading(false);
       document.querySelector("#city").value = "";
@@ -33,14 +31,23 @@ function App() {
   const validationForm = e => {
     let city = document.querySelector("#city").value.trim();
     let country = document.querySelector("#country").value.trim();
-    if (city === "" && country === "") {
+    if (city === "") {
       let alert = document.querySelector(".my-alert");
       alert.style.display = "block";
       setTimeout(() => {
         alert.style.display = "none";
       }, 5000);
+      return false;
     }
-    return false;
+    if (country === "") {
+      let alert = document.querySelector(".my-alert");
+      alert.style.display = "block";
+      setTimeout(() => {
+        alert.style.display = "none";
+      }, 5000);
+      return false;
+    }
+    return true;
   };
 
   return (
