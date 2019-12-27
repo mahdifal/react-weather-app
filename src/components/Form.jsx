@@ -47,7 +47,7 @@ export default function Form({ getWeather }) {
                         </form>
                     </div>
                     <div className="footer align-self-end mt-3">
-                        <div className="alert alert-danger my-alert" style={{ display: 'none' }}>
+                        <div className="alert alert-warning my-alert" style={{ display: 'none' }}>
                             please enter your city and country
                         </div>
                     </div>

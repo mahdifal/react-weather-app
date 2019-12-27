@@ -7,7 +7,7 @@ export default function Weather({ weather }) {
             {weather.map(item => {
                 return <div key={item.id} className="container">
                     <div className="row">
-                        <div className="offset-md-2 col-md-8">
+                        <div className="offset-md-3 col-md-8">
                             <div className="justify-content-center text-center" style={{ marginTop: '12rem' }}>
                                 <div className="card bg-warning mb-3" style={{ maxWidth: "18rem" }}>
                                     <div className="card-header">
@@ -34,4 +34,5 @@ export default function Weather({ weather }) {
             })}
         </div>
     )
+
 }
