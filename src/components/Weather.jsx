@@ -25,16 +25,15 @@ export default function Weather({ weather }) {
                                     </div>
                                     <div className="card-body">
                                         <h5 className="card-title">
-                                            City:
-                                            {
+                                            City: {
                                                 item.cod === "404"
                                                     ? 'Not Found!'
                                                     : item.name
                                             }
                                         </h5>
                                         <ul className="list-group list-group-flush">
-                                            <li className="list-group-item">Country:
-                                            {
+                                            <li className="list-group-item">
+                                                Country: {
                                                     item.cod === "404"
                                                         ? "Not Found!"
                                                         : item.sys.country
