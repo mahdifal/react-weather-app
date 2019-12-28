@@ -7,7 +7,7 @@ import Loading from "./components/Loading";
 function App() {
   const [weather, setWeather] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const API_KEY = "5df98c22d8ba6cfe7a4c02805ae4bd02";
+  const API_KEY = process.env.API_KEY;
 
   const getWeather = async e => {
     e.preventDefault();
