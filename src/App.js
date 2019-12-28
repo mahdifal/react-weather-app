@@ -7,7 +7,8 @@ import Loading from "./components/Loading";
 function App() {
   const [weather, setWeather] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const API_KEY = process.env.API_KEY;
+  const API_KEY = process.env.REACT_APP_API_KEY;
+  const KEY = API_KEY.substring(0, API_KEY.length - 1);
 
   const getWeather = async e => {
     e.preventDefault();
@@ -16,8 +17,9 @@ function App() {
       let country = document.querySelector("#country").value.trim();
       setIsLoading(true);
       // imperial
+
       const api_call = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${API_KEY}&units=metric`
+        `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${KEY}&units=metric`
       );
       const data = await api_call.json();
       setWeather([data]);
