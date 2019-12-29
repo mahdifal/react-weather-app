@@ -55,14 +55,14 @@ function App() {
 
   return (
     <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-6 col-md-8 col-sm-12">
-          <div className="">
+      <div className="row no-gutters">
+        <div className="col-md">
+          <div className="left">
             <Form getWeather={getWeather} />
           </div>
         </div>
 
-        <div className="col-lg-6 col-md-8 col-sm-12">
+        <div className="col-md">
           <div className="right">
             {isLoading ? <Loading /> : <Weather weather={weather} />}
           </div>

@@ -31,7 +31,7 @@ export default function Form({ getWeather }) {
                                 <label htmlFor="country">Country</label>
                                 <input type="text" className="form-control" id="country" placeholder="Enter your country ..." />
                             </div>
-                            <button type="submit" className="btn btn-light btn-block">Submit</button>
+                            <button type="submit" className="btn btn-light btn-block mt-5">Search</button>
                         </form>
                     </div>
                     <div className="footer align-self-end mt-3">

@@ -1,13 +1,13 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   -webkit-animation: gradientBG 30s ease infinite;
   animation: gradientBG 30s ease infinite;
 }
 .form-back {
-  width: 50vw;
-  height: 100vh;
+  /* width: 50vw; */
+  /* height: 100vh; */
 }
 .col {
   margin: 0 !important;
@@ -19,13 +19,12 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  width: 50vw;
   height: 100vh;
+  /* background-color: coral; */
 }
 
 .left {
-  background-color: blueviolet;
-  /* width: 100vw; */
+  /* background-color: blueviolet; */
   height: 100vh;
 }
 
