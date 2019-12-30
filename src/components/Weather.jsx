@@ -9,7 +9,6 @@ export default function Weather({ weather }) {
                     let url_icon = `http://openweathermap.org/img/wn/${icon}@2x.png`;
                     return url_icon;
                 }
-                console.log(item);
                 return (
                     <div key={item.id} className="row align-items-center justify-content-center">
                         <div className="card bg-warning col-md mb-3 text-center" style={{ maxWidth: "22rem", marginTop: '7rem' }}>
