@@ -8,8 +8,6 @@ function App() {
   const [weather, setWeather] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const API_KEY = process.env.REACT_APP_API_KEY;
-  // when deploy
-  // const KEY = API_KEY.substring(0, API_KEY.length - 1);
 
   const getWeather = async e => {
     e.preventDefault();
