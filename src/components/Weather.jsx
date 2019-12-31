@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment';
 
 export default function Weather({ weather }) {
     return (
@@ -13,6 +14,8 @@ export default function Weather({ weather }) {
                     <div key={item.id} className="row align-items-center justify-content-center">
                         <div className="card bg-warning col-md mb-3 text-center" style={{ maxWidth: "22rem", marginTop: '7rem' }}>
                             <div className="card-header">
+                                <p>{moment().format('LLLL')}</p>
+
                                 <h2>
                                     Temp: {
                                         item.cod === "404"
@@ -76,8 +79,8 @@ export default function Weather({ weather }) {
                                             item.cod === "404"
                                                 ? "Not Found!"
                                                 : item.main.humidity
-                                        }</li>
-
+                                        }
+                                    </li>
                                 </ul>
                             </div>
                         </div>
