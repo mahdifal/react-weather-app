@@ -12,7 +12,7 @@ export default function Weather({ weather }) {
                 }
                 return (
                     <div key={item.id} className="row align-items-center justify-content-center">
-                        <div className="card bg-warning card-body col-md mb-3 text-center" style={{ maxWidth: "22rem", marginTop: '7rem' }}>
+                        <div className="card bg-warning card-body col-md mb-3 text-center" style={{ maxWidth: "22rem", marginTop: '5rem' }}>
                             <div className="card-header">
                                 <p>{moment().format('LLLL')}</p>
 
